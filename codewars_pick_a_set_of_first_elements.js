@@ -11,6 +11,17 @@ first(arr, 3) //=> ['a', 'b', 'c'];
 first(arr, 0) //=> [];
 */
 
-function first(arr, n) {
-  // return arr;
+const first = (arr, n) => {
+  let sequence = []
+
+  if(n === undefined) {
+    return [arr[0]];
+  } else if(n > arr.length) {
+    return arr;
+  } else if(n > 0) {
+    for(let i = 0; i < n; i++) {
+      sequence.push(arr[i]);
+    }
+  }
+  return sequence;
 }
